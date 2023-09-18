@@ -313,5 +313,3 @@ TSWLatexianTemp*
 
 # End of https://www.toptal.com/developers/gitignore/api/latex
 
-#Enlève les pdf des labos
-/Sys-Log/Labo/**/*.pdf
