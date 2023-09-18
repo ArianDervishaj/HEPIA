@@ -31,44 +31,53 @@
 \section*{2. Format d'un fichier audio WAV}
 \subsection*{2.2 Analyse du contenu d'un fichier WAV}
 
-\begin{tabular}{|c|c|c|}
-  \hline
-  Bytes & Description & Valeur (ASCII ou décimal) \\
-  \hline
-  52 49 46 46 & Chunk ID & RIFF \\
-  \hline
-  F5 56 00 00 & Taille restante du fichier & $\begin{aligned} & 15 \times 16 + 5 \\ & + 5 \times 16^{3} + 6 \times 16^{2} \\ &= 22'261 \end{aligned}$ \\
-  \hline
-  57 41 56 45 & Format (RIFF Type) & WAVE \\
-  \hline
-  66 6D 74 20 & Sub-Chunk format ID & fmt \\
-  \hline
-  10 00 00 00 & Taille restante du sub-chunk fmt & $1 \times 16 = 16$ \\
-  \hline
-  01 00 & Format audio & 1 = PCM \\
-  \hline
-  01 00 & NumChannels & Mono \\
-  \hline
-  11 2B 00 00 & SampleRate & $\begin{aligned} & 1 \times 16 + 1 \\ & + 2 \times 16^{3} + 11 \times 16^{2} \\ &= 1'611'025 \end{aligned}$ \\
-  \hline
-  11 2B 00 00 & ByteRate & $\dfrac{1'611'025 \times 1 \times 8}{8} = 1'611'025$ \\
-  \hline
-  01 00 & ByteBloc & $\dfrac{1 \times 8}{8} = 1$ \\
-  \hline
-  08 00 & BitsPerSample & 8 \\
-  \hline
-  64 61 74 61 & Sub-chunk data ID & data \\
-  \hline
-  D1 56 00 00 & Nombre d'octets de données & 22'225 \\
-  \hline
-  -- & Premier échantillon & 80 9F BD D6 EB F8 FE FC \\
-  \hline
-  -- & Deuxième échantillon & F2 E1 CA AE 8F 70 51 35 \\
-  \hline
-  -- & Troisième échantillon & 1E 0D 03 01 07 14 29 42 \\
-  \hline
-\end{tabular}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Bytes & Description & Valeur (ASCII ou décimal) \\
+    \hline
+    52 49 46 46 & Chunk ID & RIFF \\
+    \hline
+    F5 56 00 00 & Taille restante du fichier & $\begin{aligned} 
+    & 15 \times 16 + 5 \\
+    & + 5 \times 16^{3} + 6 \times 16^{2} \\
+    &= 22'261 
+    \end{aligned}$ \\
+    \hline
+    57 41 56 45 & Format (RIFF Type) & WAVE \\
+    \hline
+    66 6D 74 20 & Sub-Chunk format ID & fmt \\
+    \hline
+    10 00 00 00 & Taille restante du sub-chunk fmt & $1 \times 16 = 16$ \\
+    \hline
+    01 00 & Format audio & 1 = PCM \\
+    \hline
+    01 00 & NumChannels & Mono \\
+    \hline
+    11 2B 00 00 & SampleRate & $\begin{aligned} 
+    & 1 \times 16 + 1 \\
+    & + 2 \times 16^{3} + 11 \times 16^{2} \\
+    &= 1'611'025 
+    \end{aligned}$ \\
+    \hline
+    11 2B 00 00 & ByteRate & $\dfrac{1'611'025 \times 1 \times 8}{8} = 1'611'025$ \\
+    \hline
+    01 00 & ByteBloc & $\dfrac{1 \times 8}{8} = 1$ \\
+    \hline
+    08 00 & BitsPerSample & 8 \\
+    \hline
+    64 61 74 61 & Sub-chunk data ID & data \\
+    \hline
+    D1 56 00 00 & Nombre d'octets de données & 22'225 \\
+    \hline
+    -- & Premier échantillon & 80 9F BD D6 EB F8 FE FC \\
+    \hline
+    -- & Deuxième échantillon & F2 E1 CA AE 8F 70 51 35 \\
+    \hline
+    -- & Troisième échantillon & 1E 0D 03 01 07 14 29 42 \\
+    \hline
+  \end{tabular}
 
+\end{document}
 \begin{enumerate}
   \item[] 8. sinusoidale
 \end{enumerate}
