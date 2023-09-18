@@ -8,7 +8,7 @@
 \begin{document}
 
 \maketitle
-
+\section*{1. Réponse}
 \subsection*{1.2 Analyse}
 \begin{enumerate}
     \item 128 en little endian\\ 
@@ -22,8 +22,39 @@
 \end{enumerate}
 
 \subsection*{1.3 Réparation d'un fichier BMP}
-\begin{enumerate}
-    \item 123123
+\begin{itemize}
+    \item 3. 01 $\rightarrow$ noir, 23 $\rightarrow$ marron etc etc
 
-\end{enumerate}
+\end{itemize}
+
+\section*{2. Format d'un fichier audio WAV}
+\subsection*{2.2 Analyse du contenu d'un fichier WAV}
+
+\begin{tabular}{|c|c|c|}
+  \hline
+    Bytes & Description & Valeur (ASCII ou décimal) \\
+  \hline
+    52 49 46 46 & Chunk ID & RIFF \\
+    F5 56 00 00 & Taille restante du fichier & $15 * 16 + 5 + 5 * 16^{3} + 6 * 16^{2} = 22'261$\\
+    57 41 56 45 & Format (RIFF Type) & WAVE \\
+    66 6D 74 20 & Sub-Chunk format ID & fmt \\
+    10 00 00 00 & Taille restante du sub-chunk fmt & $1 * 16 = 16$ \\
+    01 00 & Format audio & 1 = PCM \\
+    01 00 & NumChannels & Mono \\
+    11 2B 00 00 & SampleRate & $1 * 16 + 1 + 2 * 16^{3} + 11 * 16^{2} = 1'611'025$ \\
+    11 2B 00 00 & ByteRate & $ \frac{1'611'025 * 1 *  8}{8} = 1'611'025$\\
+    01 00 & ByteBloc & $\frac{1 * 8}{8} = 1$\\
+    08 00 & BitsPerSample & 8 \\
+    64 61 74 61 & Sub-chunk data ID & data \\
+    D1 56 00 00 & Nombre d'octets de données & 22'225 \\
+    -- & Premier échantillion & 80 9F BD D6 EB F8 FE FC \\
+    -- & Deuxieme echantillion & F2 E1 CA AE 8F 70 51 35 \\
+    -- & Troisieme echantillion & 1E 0D 03 01 07 14 29 42 \\
+  \hline
+\end{tabular}
+\begin{itemize}
+    \item 8. sinusoidale
+
+\end{itemize}
+
 \end{document}
