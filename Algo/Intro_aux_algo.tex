@@ -27,8 +27,20 @@
         }
         $div \leftarrow div + 1$ \\
     } 
-    
     \Return $estPremier$\;
+\end{algorithm}
+
+\begin{algorithm}
+    \caption{Calcul de factorielle}
+    \KwData{Un nombre entier positif, $nb$}
+    \KwResult{$res$ : résultat de la factorielle}
+
+    $nb \leftarrow Input$ \\
+    $res = 1;$ \\
+    \For{$int\ i = 1, i <= nb, i++$}{
+     $res = res * i;$
+    }
+    \Return $res$\;
 \end{algorithm}
 
 \end{document}
