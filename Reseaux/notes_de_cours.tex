@@ -1,5 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{graphicx}
+\setlength{\parindent}{0pt}
 \graphicspath{ {../images/} }
 % Title information
 \title{Réseaux : notes de cours}
@@ -9,25 +10,6 @@
 \begin{document}
 \maketitle
 \pagebreak
-
-\subsection*{Protocole d'application}
-\begin{itemize}
-    \item URL \begin{itemize}
-        \item Localisateur de ressources uniforme
-        \item http://www.cs.princeton.edu/~llp/index.html
-    \end{itemize}
-    \item HTTP \begin{itemize}
-        \item Protocole de transfert hypertexte
-    \end{itemize}
-    \item TCP \begin{itemize}
-        \item Protocole de controle de transmission
-    \end{itemize}
-    \item 17 messages pour une demande d'URL \begin{itemize}
-        \item 6 pour trouver l'adresse IP
-        \item 3 pour l'établissement de la connexion TCP4 pour la requete HTTP et l'accusé de reception
-        \item 4 messages pour supprimer la connexion TCP
-    \end{itemize}
-\end{itemize}
 
 \subsection*{Topologie réseau}
 \begin{minipage}{0.3\textwidth}
@@ -45,9 +27,95 @@
     \includegraphics{topologie.jpeg}
 \end{minipage}
 
-\subsection*{}
-\textbf{Definition récursive d'un réseau :} 
-Un réseau informatique est un système constitué d'au moins deux nœuds connectés, construit en imbriquant des réseaux à des niveaux d'abstraction de plus en plus bas, avec une infrastructure physique sous-jacente.
+\subsection*{Exigence 1 : Connectivité (p.19)}
 
 
+\textbf{Point à point (full mesh) }: \# noeuds = $\frac{m(m-1)}{2}$ (gros problème en coût)\\
+\textbf{Bus} : \# noeuds = $1+m$
+
+\subsubsection*{Lexiques des composants réseaux}
+\begin{enumerate}
+    \item Applicaiton : Utilise le réseau (Skype, ...)
+    \item Hôte : Supports apps (Laptop, ...)
+    \item Routeur : Relaie des messages entre des liens (Access point, ...)
+    \item Lien, canal : Connecte les noeuds (Wireless, wires, ...)
+\end{enumerate}
+
+\subsubsection*{Valeur d'un réseau}
+La valeur d'un réseau de N noeuds est proportionnelle à $N^{2}$. \\
+Grand réseau + de valeur qu'un petit réseau.
+
+\subsection*{Exigence 2 : Partage des ressources efficace (p.26-27)} 
+
+
+\textbf{Multiplexage (temporel, synchrone)} : chaque interval de temps $->$ nouveau slot alloué meme si pas utilisé. 
+Capacité d'accès au réseau est limité au nombre de slot.
+
+\textbf{Multiplexage statistique} : Les données sont stocké dans l'equipement et en fonction de la capacité de calcul de l'équipement, envoie les données.
+Dépend de la capacité de l'équipement.
+
+
+\subsection*{Exigence 3 : Abstraction commune aux applications (p.28-30)}
+
+
+Chaque app doit avoir une couche d'abstraction commune pour communiquer (\textbf{les sockets}).
+
+\subsubsection*{Modèles de communication courants}
+\begin{enumerate}
+    \item   Client - Serveur (topologie en étoile). \\
+            $-$ : Quasi toutes les apps sont implémentés comme ça.
+            Si le serveur tombe, tout tombe. Soucis de confidentialitée. \\
+            + : Facile à gérer.
+    \item   Pair à Pair \\
+            Chaque machine est client et serveur. \\
+            $+$ : Plus résilient. \\
+            $-$ : Faut découvrir les autres du réseaux. Les données sont éphémères.
+\end{enumerate}
+
+\subsubsection*{Fiabilité}
+
+Internet est un réseau "best effort". Un noeud peut tombé en panne n'importe quand.
+
+\subsection*{Exigence 4 : (inter) opérabilité (p.31)}
+Impact majeur sur le déploiment des réseaux aujourd'hui.
+
+Comment on fait face : 
+\begin{itemize}
+    \item On ne change rien
+    \item On structure
+    \item On automatise
+    \item On standardise
+\end{itemize}
+
+\subsection*{Architecture de réseau (p.33-34)}
+
+Plus la couche est haute, plus il y'a de changement car moins de contraintes.
+
+\subsection*{Protocoles}
+\dots
+
+\subsection*{Couches de réseaux}
+
+\textbf{Modele OSI (théorique)}
+\begin{itemize}
+    \item couche phyisique : Gère la transmission (analogique $->$ binaire).
+    \item Couche de liaison : Collecte un flux, framing.
+    \item Couche réseau : Gère le routage.
+    \item Couche transport : Envoie l'info de bout en bout. Pallie aux erreur (renvoie les paquets perdus, checksum)
+    \item Couche Session : Fournit un espace de noms pour relier les flux
+    \item Couche de présentation : Préoccupé par le format des données
+    \item Couche d'application : Normaliser le type commun d'échanges (HTTP, \dots)
+\end{itemize}
+
+\textbf{Architecture Internet (modèle TCP/IP)}
+\begin{itemize}
+    \item Applicaiton
+    \item TCP / UDP
+    \item IP
+    \item Subnetwork
+\end{itemize}
+
+\begin{minipage}{0.6\textwidth}
+    \includegraphics[scale=0.4]{architecture_internet_sablier.png}
+\end{minipage}
 \end{document}
