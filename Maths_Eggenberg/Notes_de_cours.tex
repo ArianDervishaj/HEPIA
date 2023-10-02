@@ -1,4 +1,6 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+\setlength{\parindent}{0pt} % 
 % Title information
 \title{Maths Eggenberg}
 \author{Arian Dervishaj}
@@ -8,6 +10,7 @@
 \maketitle
 \pagebreak
 
+\section*{Conversion}
 \subsection*{Méthode de la soustraction}
 
 \begin{enumerate}
@@ -29,20 +32,57 @@
     $(07211403)_{23} = 7 * 23^{3} + 21 * 23^{2} + 13*23 + 3 = (96'603)_{10} = (03071607)_{31}$
 
 
+\section*{Représentation des entiers signées}
+\subsection*{Complément à base deux}
+\begin{itemize}
+    \item Si $X \ge 0 \rightarrow$ 1er bit est 0, X s'écrit sur les N-1 bits restants
+    \item Si $X \le 0 \rightarrow$ 1er bit est 1, X s'écrit sur les N-1 bits restants
+\end{itemize}
 
-\pagebreak
-\subsection*{Binaire à virgule}
+\textbf{Notation : } Si X est exprimé en compéément à deux sur N bits, on notera $(X)_{\overline{2}^{N}}$
+
+\subsection*{Conversion simplifiée}
+Exemple : $-72 = (?)_{\overline{2}^{8}}$
+\begin{enumerate}
+    \item Convertir 72 en base 2 : $(01001000)_{2}$
+    \item Inverser les bits : $(10110111)_{2}$
+    \item Ajouter 1 en binaire : $(10111000)_{2}$
+    \item Et donc : $-72 = (10111000)_{\overline{2}^{8}}$
+\end{enumerate}
+
+\subsection*{Reconversion en base de 10}
+\begin{itemize}
+    \item Si 1er bit = 0 $\rightarrow X = (...)_2$
+    \item Si 1er bit = 1 $\rightarrow X = -2^{N-1} + (...)_2$
+\end{itemize}
+$(...)_2 = N-1$ bits restants en base 2
+
+\subsection*{Attention aux overflow}
+\begin{itemize}
+    \item \qquad $(5)_{10}$ \qquad $(0101)_{\overline{2}^8}$
+    \item + \quad $(5)_{10}$ \qquad $(0101)_{\overline{2}^8}$
+    \item = \quad $(10)_{10}$ \quad \  $(1010)_{\overline{2}^8}$
+    \item Alors que : $(1010)_{\overline{2}^8} = -2^{3} + (010)_{2} = -8 + 2 = -6$
+\end{itemize}
+
+\section*{Binaire à virgule}
+On ne peut que travailler avec des nombres avec des décimales \textbf{FINIES}.
+
 Que vaut $(13.625)_{10} = (?)_{2}$
-\subsubsection*{Methode 1}
-$ \rightarrow 8 + 4 + 1 + \frac{1}{2} + \frac{0}{4} + \frac{1}{8} = (1101,101)_2$
+\subsubsection*{Methode par tatonnement}
+$ \rightarrow 13.625 = 8 + 4 + 1 + \frac{1}{2} + \frac{0}{4} + \frac{1}{8} = (1101,101)_2$
 
-\subsubsection*{Methode 2}
+\subsubsection*{Methode par multiplication}
 
-$\frac{2*0.625}{2} = \frac{1.25}{2} = \frac{1}{2} + \frac{0.25}{2} \\
+$ 13 = 2^{3} + 2^{2} + 2^{0} = 1101 \\
+(0.625)_{10} = (?)_2 \rightarrow \frac{2*0.625}{2} = \frac{1.25}{2} = \frac{1}{2} + \frac{0.25}{2} \\
 \frac{0.25}{2} = \frac{0.5}{4} = \frac{0}{4} + \frac{0.5}{4} \\
-\frac{0.5}{4} = \frac{1}{8} + 0$ \\
+\frac{0.5}{4} = \frac{1}{8} + 0$
+\vspace{10pt}
 
-Quand on a 1 au dessus de la fraction $\rightarrow$ ajoute 1 dans le binaire
+Partie entière : bit à garder. \\
+Recommencer avec la partie décimal. \\
+(Garder les bit dans l'ordre d'apparition.)
 
 
 
