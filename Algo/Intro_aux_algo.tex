@@ -65,4 +65,28 @@
 
 \end{algorithm}
 
+\begin{algorithm}
+    \caption{Algorithme de tri par séléction}
+    \KwData{$tab[\ ]$, tableau.}
+    \KwResult{retourne le tableau trié}
+
+    $n \leftarrow$ taille de $tab[\ ]$ \\
+
+    \For{$i = 0; i < n-1; i++$}{
+        $min \leftarrow i$ \\
+        \For{$j = i + 1; j < n; j++ $}{
+            \If{$tab[j] < tab[min]$}{
+                $min \leftarrow j$
+            }
+        }
+        \If{$min \ne i$}{
+            $tmp \leftarrow tab[i]$\\
+            $tab[i] = tab[min]$ \\
+            $tab[min] = tmp$ \\
+        }
+    }
+    \Return $tab$\;
+
+\end{algorithm}
+
 \end{document}
