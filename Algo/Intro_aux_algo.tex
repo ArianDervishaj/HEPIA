@@ -45,4 +45,24 @@
     \Return $res$\;
 \end{algorithm}
 
+\begin{algorithm}
+    \caption{Trouver le plus petit entier d'une liste}
+    \KwData{$nb[\ ]$, liste d'entier}
+    \KwResult{$minNb$ : plus petit entier de la liste}
+
+    $nb[\ ] \leftarrow Input$ \\
+    $size \leftarrow$ longeur de nb[\ ]\\
+    $minNb \leftarrow nb[0]$ \\
+    $index \leftarrow 0$ \\
+
+    \For{$int\ i = 1, i <= nb, i++$}{
+     \If{$nb[i] < nb[index]$}{
+        $minNb \leftarrow nb[i]$ \\
+        $index \leftarrow i$ \\
+     }
+     }
+    \Return $minNb$\;
+
+\end{algorithm}
+
 \end{document}
