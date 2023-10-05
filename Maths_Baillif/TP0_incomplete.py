@@ -55,7 +55,7 @@ def test_inside( pt , Contr , Tol = 0.0001 ):
 
     while(is_inside and i < len(Contr)):
 
-        if(pt[0]*Contr[i][0] + pt[1]*Contr[i][1] > Contr[i][2]+Tol):
+        if(pt[0]*Contr[i][0] + pt[1]*Contr[i][1] > Contr[i][2]+Tol and pt[0]*Contr[i][0] + pt[1]*Contr[i][1] < Contr[i][2]-Tol):
             is_inside = False
 
         i += 1
@@ -85,17 +85,21 @@ def prog_lin_2( F , C ):
         return None
     max_val = max( Good_val )
     max_index = Good_val.index(max_val)
+    min_val = min(Good_val)
+    min_index = Good_val.index(min_val)
     F_txt = "{}x + {}y + {}".format(F[0],F[1],F[2])
     txt = "La fonction {} prendra la valeur maximum de {} au point {}".format(F_txt,max_val , Good_pts[max_index] )
+    txt1 = "La fonction {} prendra la valeur minimum de {} au point {}".format(F_txt,min_val , Good_pts[min_index] )
     print()
     print(txt)
+    print(txt1)
     return Good_pts[max_index], max_val
     
 
 #prog_lin_2([30,40,0], [[4,9,40],[5,5,25],[10,3,30],[-1,0,0],[0,-1,0]])
 
-# prog_lin_2([315,205,-10],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
+prog_lin_2([315,205,-10],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
 
-# prog_lin_2([4,3,25],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
+#prog_lin_2([4,3,25],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
 
 # prog_lin_2([315,205,10],[[1,2,14],[10,10,100]])
