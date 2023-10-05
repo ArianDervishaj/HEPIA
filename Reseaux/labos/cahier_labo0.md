@@ -64,17 +64,14 @@ Couche Transport (4) :
 Le message ICMP est transmis à la couche IP.
 
 Couche Réseau (3) :
-L'adresse IP de destination est déterminée en résolvant le nom "google.com" en une adresse IP à l'aide de protocoles de résolution DNS.
+L'adresse IP de destination est déterminée en résolvant le nom "google.com" en une adresse IP grâce à des protocoles de résolution DNS.
 Le message ICMP est encapsulé dans un paquet IP. L'adresse IP source et l'adresse IP de destination sont spécifiées dans l'en-tête IP.
-L'en-tête IP contient également des informations telles que le numéro de protocole ICMP (1) pour indiquer qu'il s'agit d'un message ICMP.
+L'en-tête IP contient également des informations par exemple le numéro de protocole ICMP pour indiquer qu'il s'agit d'un message ICMP.
 
 Couche Liaison de données (2) :
 Le paquet IP est encapsulé dans une trame Ethernet.
-L'adresse MAC source est celle de l'interface réseau de l'émetteur, tandis que l'adresse MAC de destination est celle du routeur ou de la passerelle par défaut.
+L'adresse MAC source est celle de l'interface réseau de la source, tandis que l'adresse MAC de destination est celle du routeur ou de la passerelle de l'HEPIA.
 L'en-tête Ethernet contient également des informations de type pour indiquer qu'il s'agit d'un paquet IP.
-
-Couche Physique (1) :
-La trame Ethernet est transmise sur le support physique, qu'il s'agisse d'un câble Ethernet, d'une connexion Wi-Fi, etc.
 
 ### C.2 pingez maintenant bbb.hesge.ch et refaites la même analyse que pour google.com. Est-ce que les adresses Ethernet source et destination ont changé ? Même question pour les adresses IP source et destination
 
@@ -84,3 +81,9 @@ Les addresses Ethernet sont les mêmes. L'addresse IP source d'un request est la
 
 Les addresses ethernet sont les mêmes que pour google.com.
 L'addresse IP de la source du request est la même, c'est à dire 10.136.205.47. Cependant l'IP de la destination a changé, elle est devenue : 185.125.25.1.
+
+### D.1 Pingez l’adresses IP de vos/vôtre collègues de classe.
+
+Le ping fonctionne sans soucis.
+
+![Ping un camarade](../images/../../images/Reseau/labo0/Ping_Collegue.png)
