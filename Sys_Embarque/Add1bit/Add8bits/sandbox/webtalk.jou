@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Oct  2 15:58:34 2023
+# Process ID: 34230
+# Current directory: /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox
+# Command line: wbtcv -mode batch -source /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/.Xil/Vivado-33948-hepia-ws-8848-lx/webtalk/labtool_webtalk.tcl -notrace
+# Log file: /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/webtalk.log
+# Journal file: /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/webtalk.jou
+#-----------------------------------------------------------
+source /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/.Xil/Vivado-33948-hepia-ws-8848-lx/webtalk/labtool_webtalk.tcl -notrace

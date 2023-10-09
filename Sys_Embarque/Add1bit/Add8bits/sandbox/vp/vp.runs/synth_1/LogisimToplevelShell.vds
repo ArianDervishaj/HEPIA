@@ -1,0 +1,234 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Oct  2 15:55:39 2023
+# Process ID: 31753
+# Current directory: /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/vp/vp.runs/synth_1
+# Command line: vivado -log LogisimToplevelShell.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LogisimToplevelShell.tcl
+# Log file: /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/vp/vp.runs/synth_1/LogisimToplevelShell.vds
+# Journal file: /home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/vp/vp.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source LogisimToplevelShell.tcl -notrace
+Command: synth_design -top LogisimToplevelShell -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31938
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2126.168 ; gain = 0.000 ; free physical = 22562 ; free virtual = 34647
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LogisimToplevelShell' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/toplevel/LogisimToplevelShell_behavior.vhd:10]
+INFO: [Synth 8-3491] module 'Add8bits' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add8bits_entity.vhd:15' bound to instance 'Add8bits_0' of component 'Add8bits' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/toplevel/LogisimToplevelShell_behavior.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'Add8bits' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add8bits_behavior.vhd:10]
+INFO: [Synth 8-3491] module 'Add4bits' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_entity.vhd:15' bound to instance 'add4bits_1' of component 'Add4bits' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add8bits_behavior.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'Add4bits' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_behavior.vhd:10]
+INFO: [Synth 8-3491] module 'Add1bit' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_entity.vhd:15' bound to instance 'add1bit_1' of component 'Add1bit' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_behavior.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'Add1bit' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'AND_GATE' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/AND_GATE_entity.vhd:15' bound to instance 'GATE_1' of component 'AND_GATE' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'AND_GATE' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/AND_GATE_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'AND_GATE' (1#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/AND_GATE_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'OR_GATE_3_INPUTS' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/OR_GATE_3_INPUTS_entity.vhd:15' bound to instance 'GATE_2' of component 'OR_GATE_3_INPUTS' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'OR_GATE_3_INPUTS' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/OR_GATE_3_INPUTS_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'OR_GATE_3_INPUTS' (2#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/OR_GATE_3_INPUTS_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'XOR_GATE_ONEHOT' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/XOR_GATE_ONEHOT_entity.vhd:15' bound to instance 'GATE_3' of component 'XOR_GATE_ONEHOT' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'XOR_GATE_ONEHOT' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/XOR_GATE_ONEHOT_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'XOR_GATE_ONEHOT' (3#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/XOR_GATE_ONEHOT_behavior.vhd:10]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'AND_GATE' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/AND_GATE_entity.vhd:15' bound to instance 'GATE_4' of component 'AND_GATE' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:88]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'AND_GATE' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/AND_GATE_entity.vhd:15' bound to instance 'GATE_5' of component 'AND_GATE' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:94]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'XOR_GATE_ONEHOT' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/gates/XOR_GATE_ONEHOT_entity.vhd:15' bound to instance 'GATE_6' of component 'XOR_GATE_ONEHOT' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:100]
+INFO: [Synth 8-256] done synthesizing module 'Add1bit' (4#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_behavior.vhd:10]
+INFO: [Synth 8-3491] module 'Add1bit' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_entity.vhd:15' bound to instance 'add1bit_2' of component 'Add1bit' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_behavior.vhd:61]
+INFO: [Synth 8-3491] module 'Add1bit' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_entity.vhd:15' bound to instance 'add1bit_3' of component 'Add1bit' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_behavior.vhd:68]
+INFO: [Synth 8-3491] module 'Add1bit' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add1bit_entity.vhd:15' bound to instance 'add1bit_4' of component 'Add1bit' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_behavior.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'Add4bits' (5#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_behavior.vhd:10]
+INFO: [Synth 8-3491] module 'Add4bits' declared at '/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add4bits_entity.vhd:15' bound to instance 'add4bits_2' of component 'Add4bits' [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add8bits_behavior.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Add8bits' (6#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/circuit/Add8bits_behavior.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'LogisimToplevelShell' (7#1) [/home/arian.dervisha/Desktop/Add1bit/Add8bits/vhdl/toplevel/LogisimToplevelShell_behavior.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2126.168 ; gain = 0.000 ; free physical = 22624 ; free virtual = 34711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2139.059 ; gain = 12.891 ; free physical = 22626 ; free virtual = 34712
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2139.059 ; gain = 12.891 ; free physical = 22626 ; free virtual = 34712
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.059 ; gain = 0.000 ; free physical = 22626 ; free virtual = 34712
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/arian.dervisha/Desktop/Add1bit/Add8bits/xdc/vivadoConstraints.xdc]
+Finished Parsing XDC File [/home/arian.dervisha/Desktop/Add1bit/Add8bits/xdc/vivadoConstraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/arian.dervisha/Desktop/Add1bit/Add8bits/xdc/vivadoConstraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LogisimToplevelShell_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/LogisimToplevelShell_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2298.902 ; gain = 0.000 ; free physical = 22540 ; free virtual = 34628
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2298.902 ; gain = 0.000 ; free physical = 22539 ; free virtual = 34627
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22594 ; free virtual = 34680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22594 ; free virtual = 34680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22593 ; free virtual = 34680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22591 ; free virtual = 34679
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22569 ; free virtual = 34661
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22443 ; free virtual = 34531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22443 ; free virtual = 34531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22433 ; free virtual = 34522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     4|
+|2     |LUT5 |     8|
+|3     |IBUF |    17|
+|4     |OBUF |     9|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22455 ; free virtual = 34526
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2298.902 ; gain = 12.891 ; free physical = 22508 ; free virtual = 34579
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22507 ; free virtual = 34578
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2298.902 ; gain = 0.000 ; free physical = 22584 ; free virtual = 34655
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2298.902 ; gain = 0.000 ; free physical = 22533 ; free virtual = 34604
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 2298.902 ; gain = 172.734 ; free physical = 22652 ; free virtual = 34723
+INFO: [Common 17-1381] The checkpoint '/home/arian.dervisha/Desktop/Add1bit/Add8bits/sandbox/vp/vp.runs/synth_1/LogisimToplevelShell.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file LogisimToplevelShell_utilization_synth.rpt -pb LogisimToplevelShell_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  2 15:56:20 2023...
