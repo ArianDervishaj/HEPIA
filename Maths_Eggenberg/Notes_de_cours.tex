@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{multicol}
 \setlength{\parindent}{0pt}
 % Title information
 \title{Maths Eggenberg}
@@ -84,6 +86,52 @@ Partie entière : bit à garder. \\
 Recommencer avec la partie décimal. \\
 (Garder les bit dans l'ordre d'apparition.)
 
+\section*{Nombres à virgule flottante}
 
+\subsection*{Ecriture scientifique : en base 10}
+
+$\pm x,y * 10^{Z}$ \quad $ z \in Z, y \in N, x \in \{1,\dots,9\}$
+
+\subsection*{Encodage : En binaire}
+
+
+\colorbox{yellow!20}{$x_0$} \colorbox{red!20}{$x_1 \dots x_8$} \colorbox{green!20}{$x_9 \dots x_{31}$}
+\begin{itemize}
+    \item \colorbox{red!20}{Exposant}
+    \item \colorbox{green!20}{Mantisse (23bits)}
+\end{itemize}
+$(-1)^{x_0}(2)^{(x_1 \dots x_8)_2 - 127}(1,x_9 \dots x_{31})_2$
+
+\subsubsection*{En 32 bits}
+    \begin{itemize}
+        \item 11 bits pour l'exposants
+        \item 23 bits pour la Mantisse
+        \item 127 de décalage
+    \end{itemize}
+\subsubsection*{En 64 bits}
+    \begin{itemize}
+        \item 11 bits pour l'exposants
+        \item 52 bits pour la Mantisse
+        \item 1023 de décalage
+\end{itemize}
+
+\subsection*{Exemple : }
+
+\subsubsection*{1.} 
+$(1 \quad 11001011 \quad 0010...0)_{float} = $
+$(-1)*2^{203-127} * (1,\frac{1}{8}) = 1.125 * 2^{76}$
+
+\subsubsection*{2.}
+$(-784)_{10} = (?)_{float}$
+$784 = 2^{9}+2^{8}+2^{4} = 1 \colorbox{blue!20}{10001 0000} $\\
+$ e = 127 + 9 = 136 = 128 + 8 =  \colorbox{red!20}{1000 1000}$ 
+
+$(1 | \colorbox{red!20}{1000 1000} | \colorbox{blue!20}{10001 0000} \overbrace{0 \dots 0}^{14})_{float} = (-784)_{10}$
+
+\subsubsection*{3.}
+$(0.07)_{10} = (0,00\colorbox{blue!20}{1000111010010100001})_2 = (1,0)*2^{-4}$ \\
+$e = 127 -4 = 123 = 64 + 32 + 16 + 8 + 2 + 1 = \colorbox{red!20}{1111011}$
+
+$(0 \colorbox{red!20}{1111011} \colorbox{blue!20}{1000111010010100001}00000)_{float}= (0.07)_{10}$ 
 
 \end{document}
