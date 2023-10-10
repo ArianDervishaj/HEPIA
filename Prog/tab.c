@@ -5,10 +5,12 @@
 double findMin(double tab[], int size);
 double* initTab(int size);
 double* sortTab(double tab[], int size);
+int isSorted(double tab[], int size);
 
 int main() {
     int size = 10;
     double* myList = initTab(size);
+    printf("myList : ");
     for(int i = 0; i< 10; i++){
         printf("%f, ", myList[i]);
     }
@@ -18,8 +20,15 @@ int main() {
     printf("min = %f",min);
     printf("\n");
 
+    int isMyListSorted = isSorted(myList, size);
+
     double* mySortedList = sortTab(myList, size);
 
+    int isMySortedListSorted = isSorted(mySortedList, size);
+
+    printf("is myList sorted : %d, is MySortedList sorted : %d \n", isMyListSorted, isMySortedListSorted);
+
+    printf("mySortedList");
     for(int i = 0; i<size; i++){
         printf("%f, ",mySortedList[i]);
     }
@@ -67,4 +76,14 @@ double* sortTab(double tab[], int size){
     }
 
     return tab;
+}
+
+int isSorted(double tab[], int size){
+    for (int i = 0; i < size-1; i += 1) {
+        if (tab[i] > tab[i + 1]) {
+            return 0;
+        }
+    
+    }
+    return 1;
 }
