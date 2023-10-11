@@ -88,12 +88,10 @@ Le message ICMP est transmis à la couche IP.
 Couche Réseau (3) :
 L'adresse IP de destination est déterminée en résolvant le nom "google.com" en une adresse IP grâce à des protocoles de résolution DNS.
 Le message ICMP est encapsulé dans un paquet IP. L'adresse IP source et l'adresse IP de destination sont spécifiées dans l'en-tête IP.
-L'en-tête IP contient également des informations par exemple le numéro de protocole ICMP pour indiquer qu'il s'agit d'un message ICMP.
 
 Couche Liaison de données (2) :
 Le paquet IP est encapsulé dans une trame Ethernet.
 L'adresse MAC source est celle de l'interface réseau de la source, tandis que l'adresse MAC de destination est celle du routeur ou de la passerelle de l'HEPIA.
-L'en-tête Ethernet contient également des informations de type pour indiquer qu'il s'agit d'un paquet IP.
 
 ### C.2 pingez maintenant bbb.hesge.ch et refaites la même analyse que pour google.com. Est-ce que les adresses Ethernet source et destination ont changé ? Même question pour les adresses IP source et destination
 
