@@ -140,82 +140,113 @@
     <comp lib="0" loc="(160,450)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="d"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="0" loc="(160,330)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="a"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(500,270)" name="NOT Gate">
       <a name="size" val="20"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(550,540)" name="AND Gate">
       <a name="inputs" val="3"/>
-      <a name="label" val="ac-d"/>
+      <a name="label" val="AND_L2_2"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="0" loc="(830,410)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="L2"/>
       <a name="labelloc" val="east"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
-    <comp lib="1" loc="(500,710)" name="NOT Gate"/>
+    <comp lib="1" loc="(500,710)" name="NOT Gate">
+      <a name="labelfont" val="SansSerif plain 10"/>
+    </comp>
     <comp lib="0" loc="(830,370)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="L1"/>
       <a name="labelloc" val="east"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(550,620)" name="AND Gate">
       <a name="inputs" val="3"/>
-      <a name="label" val="bcd"/>
+      <a name="label" val="AND_L2_3"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(550,100)" name="AND Gate">
       <a name="inputs" val="3"/>
-      <a name="label" val="acd"/>
+      <a name="label" val="AND_L1_1"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="0" loc="(160,370)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="b"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(550,260)" name="AND Gate">
       <a name="inputs" val="4"/>
-      <a name="label" val="-abc-d"/>
+      <a name="label" val="AD_L1_3"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(550,180)" name="AND Gate">
       <a name="inputs" val="3"/>
-      <a name="label" val="a-bc"/>
+      <a name="label" val="AND_L1_2"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(740,480)" name="OR Gate">
       <a name="inputs" val="4"/>
+      <a name="label" val="OR_L2"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
-    <comp lib="1" loc="(500,180)" name="NOT Gate"/>
-    <comp lib="1" loc="(500,690)" name="NOT Gate"/>
+    <comp lib="1" loc="(500,180)" name="NOT Gate">
+      <a name="labelfont" val="SansSerif plain 10"/>
+    </comp>
+    <comp lib="1" loc="(500,690)" name="NOT Gate">
+      <a name="labelfont" val="SansSerif plain 10"/>
+    </comp>
     <comp lib="1" loc="(550,700)" name="AND Gate">
       <a name="inputs" val="4"/>
-      <a name="label" val="a-b-cd"/>
+      <a name="label" val="AND_L2_4"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(550,460)" name="AND Gate">
       <a name="inputs" val="3"/>
-      <a name="label" val="-abd"/>
+      <a name="label" val="AND_L2_1"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(740,320)" name="OR Gate">
       <a name="inputs" val="4"/>
+      <a name="label" val="OR_L1"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
-    <comp lib="1" loc="(500,440)" name="NOT Gate"/>
+    <comp lib="1" loc="(500,440)" name="NOT Gate">
+      <a name="labelfont" val="SansSerif plain 10"/>
+    </comp>
     <comp lib="1" loc="(550,340)" name="AND Gate">
       <a name="inputs" val="3"/>
-      <a name="label" val="b-cd"/>
+      <a name="label" val="AND_L1_4"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="0" loc="(160,410)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="c"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(500,340)" name="NOT Gate">
       <a name="size" val="20"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
     <comp lib="1" loc="(500,240)" name="NOT Gate">
       <a name="size" val="20"/>
+      <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
-    <comp lib="1" loc="(500,560)" name="NOT Gate"/>
+    <comp lib="1" loc="(500,560)" name="NOT Gate">
+      <a name="labelfont" val="SansSerif plain 10"/>
+    </comp>
   </circuit>
 </project>
