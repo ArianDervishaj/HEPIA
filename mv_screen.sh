@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mv ~/Pictures/Screenshots/* ~/Desktop/HEPIA/images
+mv ~/Pictures/Screenshots/* ~/HEPIA/images
