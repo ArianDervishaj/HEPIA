@@ -1,4 +1,4 @@
-# labo
+# Labo
 
 ## A. Préparation
 
@@ -10,7 +10,9 @@
 
 En full-duplex, le canal de communication est bidirectionnel. C'est à dire que les deux parties peuvent communiquer l'une avec l'autre en meme temps.
 
-## B. Encodage Ethernet en 10Mb/s
+![Observation d'une trame ethernet via picoscope](image-3.png)
+
+### B. Encodage Ethernet en 10Mb/s
 
 ### B.1 Sur quel catégorie de câble Ethernet a lieu la capture ? Quelle vitesse maximum peut-il supporter sans pertes ?
 
@@ -28,7 +30,7 @@ L'amplitude est de 2V.
 
 ### B.4 Quelle est la fréquence max du signal ? Est-ce que le signal est toujours à la même fréquence ? Expliquer
 
-La fréquence maximale du signal est de 10.04 MHz. Le signal peut varier en fréquence en fonction de sa nature et des conditions de transmission.
+La fréquence maximale du signal est de 10.04 MHz. Le signal peut varier en fréquence en fonction de sa nature et des conditions de transmission. A noté que la fréquence du signal peut différe en fonction de la composante qui est représenté. Voir les remarques.
 
 ### B.5 Est-ce que Ethernet dispose d’une ligne physique dédiée à transmettre l’horloge ? Expliquer pourquoi
 
@@ -68,10 +70,21 @@ Plus accès aux machines.
 
 Le codage de Manchester.
 
+![Encodage Manchester d'une trame ethernet](image-2.png)
+
 ### B.13 S’agit-il d’une modulation de phase, de fréquence ou d’amplitude ? Justifier
 
 Le codage de Manchester utilise des changements de phase pour représenter les bits. Un bit "0" est indiqué par un changement de phase descendant (haut vers bas), et un bit "1" est représenté par un changement de phase montant (bas vers haut). Cela en fait une méthode de modulation de phase.
 
 ### B.14 Donner une séquence de bits qui implique un encodage manchester à la fréquence physique maximale. Retrouver cette séquence de bits identique sur la capture du picoscope et vérifier que le signal est effectivement à cette fréquence là à l’aide de la règle
 
-Un exemple de séquence serait "00000000" ou "1111111".
+Un exemple de séquence serait "*00000000*" ou "*1111111*".
+
+### Remarques
+Nous avons pu observer la première composante d'une trame ethernet : le préambule. Elle permet la synchronisation du transfert.
+
+![Préambule](image-4.png)
+
+Dans un second temps, il est important de noté que le paquet est terminé par un *Inter Frame Gap*, qui définit une pause de transmission de 9,6 µs théorique.
+
+![Inter Frame Gap](image-5.png)
