@@ -10,9 +10,7 @@
 
 En full-duplex, le canal de communication est bidirectionnel. C'est à dire que les deux parties peuvent communiquer l'une avec l'autre en meme temps.
 
-![Observation d'une trame ethernet via picoscope](image-3.png)
-
-### B. Encodage Ethernet en 10Mb/s
+## B. Encodage Ethernet en 10Mb/s
 
 ### B.1 Sur quel catégorie de câble Ethernet a lieu la capture ? Quelle vitesse maximum peut-il supporter sans pertes ?
 
@@ -46,11 +44,13 @@ Baud : ?????
 
 bit/s : ?????
 
+# TODO
+
 En Manchester, la vitesse en baud est égale à la vitesse en bit/s. Car dans ce codage, chaque changement de phase représente un seul bit de données. Donc, pour chaque transition, il transmet un bit, ce qui signifie que la fréquence en baud et la vitesse en bit/s sont les mêmes, car chaque symbole équivaut à un bit.
 
 ### B.8 Quel est le débit binaire de la trame ? Justifier à l’aide d’une capture d’écran et l’utilisation de la règle de l’oscilloscope
 
-Pas accès aux machines
+10 millions de bits par secondes.
 
 ### B.9 Expliquer à l’aide d’un schéma indiquant une séquence binaire pourquoi le codage utilisé est coûteux en fréquence
 
@@ -60,17 +60,17 @@ Comme on peut le voir sur le schéma du dessus. L'encodage de Manchestrer foncti
 
 ### B.10 Quelle est le temps nécessaire pour envoyer un bit ?
 
-Pas accès aux machines
+0.1 microseconde
 
 ### B.11 Mesurer le temps passé entre la transmission de deux bits consécutifs d’une trame ?
 
-Plus accès aux machines.
+![Duree entre 2 bits](./screenshot/duree-entre-2-bit.png)
 
 ### B.12 Quel est le codage utilisé par la couche physique pour encoder/décoder l’information ?
 
 Le codage de Manchester.
 
-![Encodage Manchester d'une trame ethernet](image-2.png)
+![Encodage Manchester d'une trame ethernet](./screenshot/image-2.png)
 
 ### B.13 S’agit-il d’une modulation de phase, de fréquence ou d’amplitude ? Justifier
 
@@ -80,11 +80,47 @@ Le codage de Manchester utilise des changements de phase pour représenter les b
 
 Un exemple de séquence serait "*00000000*" ou "*1111111*".
 
-### Remarques
-Nous avons pu observer la première composante d'une trame ethernet : le préambule. Elle permet la synchronisation du transfert.
+## C. Framing Ethernet
 
-![Préambule](image-4.png)
+### C.2 Comment est signalé le début d’une trame Ethernet ?
 
-Dans un second temps, il est important de noté que le paquet est terminé par un *Inter Frame Gap*, qui définit une pause de transmission de 9,6 µs théorique.
+Le début d'une trame ethernet est signalé par le préambule sur 7 octets.
 
-![Inter Frame Gap](image-5.png)
+![Préambule d'une trame](./screenshot/preambule.png)
+
+### C.3 Quelle est la durée mesurée entre deux trames ?
+
+La durée entre deux trames est d'environ 1.9 ms.
+
+![Deux trames ethernets](./screenshot/capture-deux-trames-ethernet.png)
+
+### C.4 Comment Ethernet 10baseT détecte-t-il la fin d’une trame ? est-ce qu’il y a un marqueur de fin ?
+
+Il y'a une pause qui s'appelle un _Inter Frame Gap_ suivit d'un bit de valeur 0.
+
+![Fin d'une trame en 10baseT](./screenshot/fin-trame-ethernet.png)
+
+## D. Adressage et encapsulation
+
+### D.1 A partir du signal, décoder en binaire un byte du champs de données de la trame ainsi le champs type/length de la trame. Dans quel ordre sont transmis les bits sur media pour chaque champ ? : LSB first ou MSB first ?
+
+MSB first
+
+### D.2 A partir de l’interface du picoscope, retrouvez l’adresse ethernet source de votre PC ? Dessinez les 24 premiers bits sur une feuille avec le codage trouvé.
+
+![Addresse mac](./screenshot/mac-addr-source.png)
+
+![Manchester a la main](./screenshot/manchester-a-la-main.png)
+
+
+## F. Reflexion
+
+### F.1 Est-il possible de générer une Trame Ethernet depuis le picoscope en utilisant l’AWG (Arbitrary Waveform Generator). Expliquer pourquoi ?
+
+Non car les trames des paquets de données ethernet suivent des nrormes très strictes. Tout généré à la main serait trop complexe.
+
+### F.2 Le signal binaire à 10 Mb/s implique que chaque bit est envoyé en 0.1 microsecondes. Sur une paire torsadée en cuivre, le signal se propage à environ 74% de la vitesse de la lumlière (c’est à dire 0.74 * 3*10E8). Quelle est la taille d’un bit sur le câble ?
+
+1. Vitesse : 0.74 * 3 * 10^8 [m/s]
+2. Temps pour envoyer 1 bit : 1 / 10^7 [1/s]
+3. Taille d'un bit : Vitesse * Temps pour 1 bit = (0.74 * 3 * 10^8) * (1/10^7) =  22.2 [m]
