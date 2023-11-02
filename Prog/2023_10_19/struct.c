@@ -95,6 +95,12 @@ void fraction_div_inplace(fraction_t *f_1,fraction_t *f_2,fraction_t *f_3){
     fraction_init(f_3,new_num,new_denom);
 }
 
+void fraction_neg_inplace(fraction_t *f_1,fraction_t *f_2){
+    int32_t new_num = f_1->num * (-1);
+    
+    fraction_init(f_2,new_num,f_1->denom);
+}
+
 int main(void){
     fraction_t frac_1;
     fraction_init(&frac_1, 2,3);
@@ -102,7 +108,7 @@ int main(void){
     fraction_init(&frac_2, 3,5);
     
     fraction_t frac_3;
-    fraction_div_inplace(&frac_1, &frac_2, &frac_3);
+    fraction_neg_inplace(&frac_1, &frac_3);
 
     fract_print(&frac_3);
     return 0;
