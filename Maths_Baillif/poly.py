@@ -61,11 +61,23 @@ def evaluate_p(p,x):
     return res
 
 ## 5.
-# def euclide(p1,p2):
-#     iterations = 0
-#     r = 1
-#     while (len(p2) >= len(p1)) or (r != 0):
-#         p2[0] = 0 #TODO
+# def euclidean_division(dividend, divisor):
+#     quotient = [0] * (len(dividend) - len(divisor) + 1)
+    
+#     while len(dividend) >= len(divisor):
+#         # Calculate the term to add to the quotient
+#         term = [0] * (len(dividend) - len(divisor)) + [dividend[0] / divisor[0]]
+        
+#         # Subtract the term multiplied by the divisor from the dividend
+#         dividend = [d - t * divisor[i] for d, i, t in zip(dividend, range(len(term)), term)]
+        
+#         # Remove leading zeros from the updated dividend
+#         dividend = [d for d in dividend if d != 0]
+        
+#         # Add the term to the quotient
+#         quotient[len(quotient) - len(term):] = [q + t for q, t in zip(quotient[len(quotient) - len(term):], term)]
+    
+#     return quotient, dividend
 
 ## 6.
 
@@ -87,7 +99,7 @@ def laGrange(points):
 
 
 # Choix de l'exo
-exercice = 6
+exercice = 5
 
 p1 = [1,2,3,0]
 p2 = [3,0,2,1]
@@ -107,9 +119,10 @@ if exercice == 3:
 if exercice == 4:
     res = evaluate_p(p1,x)
 if exercice == 5:
-    res = evaluate_p(p1,p2)    
+    quotient, dividend = euclidean_division([2,1,3],[1,1])
 if exercice == 6:
     res = laGrange(points)
 
-print(res)
+print(quotient)
+print(dividend)
 
