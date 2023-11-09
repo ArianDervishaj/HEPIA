@@ -60,18 +60,43 @@ def evaluate_p(p,x):
 
     return res
 
-def euclide(p1,p2):
-    iterations = 0
-    r = 1
-    while (len(p2) >= len(p1)) or (r != 0):
-        p2[0] = 0 #TODO
+## 5.
+# def euclide(p1,p2):
+#     iterations = 0
+#     r = 1
+#     while (len(p2) >= len(p1)) or (r != 0):
+#         p2[0] = 0 #TODO
+
+## 6.
+
+def laGrange(points):
+    L = [0]
+    for i, coord_i in enumerate(points):
+        li = [1]
+        for k, coord_k in enumerate(points):
+            if k != i:
+                quotient = coord_i[0] - coord_k[0] #x_i - x_k
+                if quotient == 0:
+                    raise TypeError("Deux points avec les mêmes coordonnées en x")
+                else:
+                    fac = [(-1)*coord_k[0]/quotient, 1/quotient]  # -xk/xi - xk, 1/xi -xk
+                    li = mult_poly(li,fac)  # li(x) * (-xk/xi-xk + 1/xi-xk * x)
+        li = mult_poly([coord_i[1]],li)  # li(x) = li(x) * yi
+        L = add_poly(li,L) # L(x) = L(x) + li(x)
+    return L
+
 
 # Choix de l'exo
-exercice = 4
+exercice = 6
 
 p1 = [1,2,3,0]
 p2 = [3,0,2,1]
 x=3
+
+p3 = [4321,12,32,-53]
+Xs = [1,2,3,4,5]
+
+points = [(t, evaluate_p(p3,t)) for t in Xs]
 
 if exercice == 1:
     res = add_poly(p1,p2)
@@ -82,9 +107,9 @@ if exercice == 3:
 if exercice == 4:
     res = evaluate_p(p1,x)
 if exercice == 5:
-    res = evaluate_p(p1,p2)
-
-
+    res = evaluate_p(p1,p2)    
+if exercice == 6:
+    res = laGrange(points)
 
 print(res)
-    
+
