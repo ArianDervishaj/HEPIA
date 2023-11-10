@@ -1,0 +1,23 @@
+Avertissement : Utilisation Responsable des Modèles de Langage GPT-3.5 dans le Cadre de Travaux Pratiques de Programmation
+
+Chers étudiants,
+
+Nous souhaitons vous rappeler l'importance de l'utilisation responsable des Modèles de Langage GPT-3.5 (LLM) dans le contexte de vos travaux pratiques de programmation. Alors que ces puissants modèles peuvent sembler être une ressource attrayante pour vous aider à résoudre des problèmes complexes, il est essentiel de respecter certaines directives pour garantir l'intégrité académique et le développement de vos compétences en programmation.
+
+Compréhension Fondamentale : Les LLM sont conçus pour assister, mais non pas pour se substituer à votre compréhension et à vos compétences en programmation. L'utilisation excessive de ces modèles sans une compréhension adéquate des concepts sous-jacents peut nuire à votre apprentissage à long terme.
+
+Crédit Approprié : Si vous choisissez d'intégrer du code généré par un LLM dans votre travail, assurez-vous de citer correctement la source, tout comme vous le feriez pour une référence bibliographique. Le non-respect des règles de citation peut être considéré comme une violation du code d'honneur académique.
+
+Collaboration et Plagiat : Si vous travaillez en groupe sur un projet, assurez-vous de clarifier les règles de collaboration à l'avance. L'utilisation de LLM ne devrait pas conduire au plagiat de travaux de tiers ou à une répartition inégale des tâches.
+
+Responsabilité Éthique : Évitez de demander à un LLM de générer du code malveillant, trompeur ou illégal. Vous êtes responsables de l'utilisation éthique des outils de programmation, même lorsqu'ils sont assistés par des LLM.
+
+Utilisation Limitée : Ne devenez pas dépendants des LLM pour chaque aspect de votre travail. L'utilisation fréquente de ces modèles peut réduire votre créativité et votre capacité à résoudre des problèmes de manière autonome.
+
+Développement de Compétences : L'objectif principal de votre formation en programmation est d'acquérir des compétences pratiques. Utilisez les LLM comme une ressource d'appoint pour vous aider à surmonter des obstacles spécifiques, mais ne négligez pas l'occasion d'apprendre en résolvant des problèmes par vous-même.
+
+Vérification et Test : Le code généré par les LLM doit être soigneusement vérifié et testé pour garantir son bon fonctionnement. Ne présumez jamais que le code généré est sans erreur.
+
+En conclusion, l'utilisation des Modèles de Langage GPT-3.5 dans vos travaux pratiques de programmation peut être bénéfique, mais elle doit être entreprise de manière responsable et éthique. Nous encourageons vivement la collaboration, l'apprentissage et la créativité tout en veillant à ce que ces outils enrichissent votre expérience éducative plutôt que de la compromettre. Respectez les principes de base de l'intégrité académique et continuez à développer vos compétences en programmation de manière autonome.
+
+Nous vous remercions de votre attention à cette question et vous encourageons à nous contacter en cas de doute ou de préoccupation.
