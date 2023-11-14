@@ -1,8 +1,6 @@
 ### Version incomplète du TP0 sur la programmation linéaire en dimension 2.
 
-# Rappel :
-# F : la fonction f = p*x + q*y + r, donnée sous forme [p,q,r]
-# C : les contraintes u*x + v*y <= w , données sous forme de liste de listes [u,v,w]
+
 
 ### Les fonctions: 
 
@@ -51,8 +49,6 @@ def intersection( D0 , D1 ):
 def test_inside( pt , Contr , Tol = 0.0001 ):
     is_inside = True
     i = 0
-    #####  A COMPLETER VOUS-MEMES
-
     while(is_inside and i < len(Contr)):
 
         if(pt[0]*Contr[i][0] + pt[1]*Contr[i][1] > Contr[i][2]+Tol and pt[0]*Contr[i][0] + pt[1]*Contr[i][1] < Contr[i][2]-Tol):
@@ -96,10 +92,30 @@ def prog_lin_2( F , C ):
     return Good_pts[max_index], max_val
     
 
+
+
+prog_lin_2([-20,10,5],[[1,1,20],[-3,1,0],[-2,3,20],[-2,-2,-10],[9,-3,75],[0,-1,0]])
+
+
+
+
+#HOW TO USE
+#f(x,y) = ax + by + c
+#contraintes = [[a,b,c],[a,b,c],[a,b,c]]
+#point = [a,b,c]
+
+# Rappel :
+# F : la fonction f = p*x + q*y + r, donnée sous forme [p,q,r]
+# C : les contraintes u*x + v*y <= w , données sous forme de liste de listes [u,v,w]
+
+#EXEMPLE
 #prog_lin_2([30,40,0], [[4,9,40],[5,5,25],[10,3,30],[-1,0,0],[0,-1,0]])
 
-prog_lin_2([315,205,-10],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
+#prog_lin_2([315,205,-10],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
 
 #prog_lin_2([4,3,25],[[1,2,14],[10,10,100],[20,10,190],[4,0,37],[0,1,6],[-4,1,4],[-5,-5,-10],[-25,-15,-40],[-1,0,0],[0,-1,0]])
 
 # prog_lin_2([315,205,10],[[1,2,14],[10,10,100]])
+
+# inter = intersection([1,1,20],[-3,1,0])
+# inside = test_inside(a,[[1,1,20],[-3,1,0],[-2,3,20],[-2,-2,-10],[9,-3,75],[0,-1,0]])

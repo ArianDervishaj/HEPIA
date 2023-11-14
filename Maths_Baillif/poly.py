@@ -39,18 +39,20 @@ def sub_poly(p1,p2):
 
 ## 3.
 
-def mult_poly(p1,p2):
-    n = len(p1) + len(p2) -1
+def mult_poly(p1, p2):
+    n = len(p1) + len(p2) - 1
     p3 = [0] * n
 
-    for k in range(0,len(p1)):
-        for l in range(0,len(p2)):
-            p3[k+l] += p1[k] * p2[l]
+    for k in range(len(p1)):
+        for l in range(len(p2)):
+            p3[k + l] += p1[k] * p2[l]
 
-    while p3[-1] == 0:
-        p3.pop(-1)
+    # Remove trailing zeros from the result
+    while len(p3) > 1 and p3[-1] == 0:
+        p3.pop()
 
     return p3
+
 
 ## 4.
 def evaluate_p(p,x):
@@ -99,14 +101,14 @@ def laGrange(points):
 
 
 # Choix de l'exo
-exercice = 5
+exercice = 6
 
 p1 = [1,2,3,0]
 p2 = [3,0,2,1]
 x=3
 
 p3 = [4321,12,32,-53]
-Xs = [1,2,3,4,5]
+Xs = [0,1,-2,-5]
 
 points = [(t, evaluate_p(p3,t)) for t in Xs]
 
@@ -118,11 +120,9 @@ if exercice == 3:
     res = mult_poly(p1,p2)
 if exercice == 4:
     res = evaluate_p(p1,x)
-if exercice == 5:
-    quotient, dividend = euclidean_division([2,1,3],[1,1])
+# if exercice == 5:
+    # quotient, dividend = euclidean_division([2,1,3],[1,1])
 if exercice == 6:
     res = laGrange(points)
-
-print(quotient)
-print(dividend)
+    print(res)
 
