@@ -63,25 +63,6 @@ def evaluate_p(p,x):
     return res
 
 ## 5.
-# def euclidean_division(dividend, divisor):
-#     quotient = [0] * (len(dividend) - len(divisor) + 1)
-    
-#     while len(dividend) >= len(divisor):
-#         # Calculate the term to add to the quotient
-#         term = [0] * (len(dividend) - len(divisor)) + [dividend[0] / divisor[0]]
-        
-#         # Subtract the term multiplied by the divisor from the dividend
-#         dividend = [d - t * divisor[i] for d, i, t in zip(dividend, range(len(term)), term)]
-        
-#         # Remove leading zeros from the updated dividend
-#         dividend = [d for d in dividend if d != 0]
-        
-#         # Add the term to the quotient
-#         quotient[len(quotient) - len(term):] = [q + t for q, t in zip(quotient[len(quotient) - len(term):], term)]
-    
-#     return quotient, dividend
-
-## 6.
 
 def laGrange(points):
     L = [0]
@@ -101,16 +82,16 @@ def laGrange(points):
 
 
 # Choix de l'exo
-exercice = 6
+exercice = 5
 
+
+# Variables a définir
 p1 = [1,2,3,0]
 p2 = [3,0,2,1]
 x=3
-
-p3 = [4321,12,32,-53]
-Xs = [0,1,-2,-5]
-
-points = [(t, evaluate_p(p3,t)) for t in Xs]
+# points = [(4, 235), (3, 102), (2, 37), (5, 460) ]
+# ,(-3, -108), (1, 16)
+points = [(0.0001, 14.999899980004), (10, 3805), (2000000000.0, 3.1999999992e28), (-1200000000.0, -6.91200000288e27), (400000000.0, 2.5599999968e26)]
 
 if exercice == 1:
     res = add_poly(p1,p2)
@@ -120,9 +101,22 @@ if exercice == 3:
     res = mult_poly(p1,p2)
 if exercice == 4:
     res = evaluate_p(p1,x)
-# if exercice == 5:
-    # quotient, dividend = euclidean_division([2,1,3],[1,1])
-if exercice == 6:
+if exercice == 5:
     res = laGrange(points)
     print(res)
 
+# UTILISATION
+
+#add_poly sub_poly mult_poly : 
+    # p1 = [x^n, x^n-1, ... x^0]
+    # p2 = [x^n, x^n-1, ... x^0]
+    # add_poly(p1,p2), sub_poly(p1,p2), mult_poly(p1,p2)
+
+# evaluate_p
+    # p1 = [x^n, x^n-1, ... x^0]
+    # x = 3 (an int)
+    # evaluate_p(p1,x)
+
+# lagrange
+    # points = [(x_a,y_a),(x_b,y_b),...,(x_n,y_n)]
+    # laGrange(points)
