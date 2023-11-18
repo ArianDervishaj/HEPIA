@@ -1,0 +1,12 @@
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/gpio_object.h:35:20:void gpio_write(gpio_t*, int)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/gpio_object.h:43:19:int gpio_read(gpio_t*)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalIn.h:59:5:mbed::DigitalIn::DigitalIn(PinName)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalIn.h:81:9:int mbed::DigitalIn::read()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalIn.h:118:5:mbed::DigitalIn::operator int()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:54:5:mbed::DigitalOut::DigitalOut(PinName)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:76:10:void mbed::DigitalOut::write(int)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:114:17:mbed::DigitalOut& mbed::DigitalOut::operator=(int)	16	static
+../src/labo1.cpp:14:6:void exercice1()	8	static
+../src/labo1.cpp:26:5:int main()	16	static
+../src/labo1.cpp:38:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../src/labo1.cpp:38:1:cpp)	8	static

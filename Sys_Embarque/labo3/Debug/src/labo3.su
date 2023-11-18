@@ -1,0 +1,27 @@
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/gpio_object.h:35:20:void gpio_write(gpio_t*, int)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/targets/TARGET_NXP/TARGET_LPC176X/gpio_object.h:43:19:int gpio_read(gpio_t*)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:54:5:mbed::DigitalOut::DigitalOut(PinName)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:76:10:void mbed::DigitalOut::write(int)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:88:9:int mbed::DigitalOut::read()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:114:17:mbed::DigitalOut& mbed::DigitalOut::operator=(int)	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/DigitalOut.h:141:5:mbed::DigitalOut::operator int()	16	static
+/usr/local/mcuxpressoide-11.8.0_1165/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.8.0.202306131047/tools/arm-none-eabi/include/c++/12.2.1/new:174:33:void* operator new(std::size_t, void*)	8	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/Ticker.h:70:5:mbed::Ticker::Ticker()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/Ticker.h:87:10:void mbed::Ticker::attach(mbed::Callback<void()>, float)	40	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/Ticker.h:140:13:mbed::Ticker::~Ticker()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/Ticker.h:140:13:virtual mbed::Ticker::~Ticker()	16	static
+../src/labo3.cpp:14:6:void flip()	8	static
+../src/labo3.cpp:18:6:void allume()	24	static
+../src/labo3.cpp:24:6:void eteint()	8	static
+../src/labo3.cpp:29:5:int main()	40	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/NonCopyable.h:174:5:mbed::NonCopyable<T>::NonCopyable() [with T = mbed::Ticker]	8	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/NonCopyable.h:178:5:mbed::NonCopyable<T>::~NonCopyable() [with T = mbed::Ticker]	8	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:83:5:mbed::Callback<R()>::Callback(R (*)()) [with R = void]	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:281:5:mbed::Callback<R()>::~Callback() [with R = void]	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:95:5:mbed::Callback<R()>::Callback(const mbed::Callback<R()>&) [with R = void]	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:633:10:void mbed::Callback<R()>::generate(const F&) [with F = void (*)(); R = void]	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:650:14:static R mbed::Callback<R()>::function_call(const void*) [with F = void (*)(); R = void]	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:656:17:static void mbed::Callback<R()>::function_move(void*, const void*) [with F = void (*)(); R = void]	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/Callback.h:662:17:static void mbed::Callback<R()>::function_dtor(void*) [with F = void (*)(); R = void]	8	static
+../src/labo3.cpp:34:2:void __static_initialization_and_destruction_0(int, int)	16	static
+../src/labo3.cpp:34:2:cpp)	8	static

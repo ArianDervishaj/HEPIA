@@ -1,0 +1,12 @@
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/PlatformMutex.h:61:5:PlatformMutex::~PlatformMutex()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/I2C.h:173:13:mbed::I2C::~I2C()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/I2C.h:173:13:virtual mbed::I2C::~I2C()	16	static
+../src/labo5.cpp:12:6:void read_btn()	16	static
+../src/labo5.cpp:30:5:int main()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/NonCopyable.h:178:5:mbed::NonCopyable<T>::~NonCopyable() [with T = PlatformMutex]	8	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/NonCopyable.h:178:5:mbed::NonCopyable<T>::~NonCopyable() [with T = mbed::I2C]	8	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/Serial.h:54:7:mbed::Serial::~Serial()	16	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/drivers/Serial.h:54:7:virtual mbed::Serial::~Serial()	16	static
+../src/labo5.cpp:48:1:void __static_initialization_and_destruction_0(int, int)	24	static
+/home/arian.dervisha/Documents/MCUXpresso_11.8.0_1165/workspace/mbed-os/platform/NonCopyable.h:178:5:mbed::NonCopyable<T>::~NonCopyable() [with T = mbed::Serial]	8	static
+../src/labo5.cpp:48:1:cpp)	8	static
