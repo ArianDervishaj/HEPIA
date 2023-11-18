@@ -426,12 +426,12 @@ end type_architecture;
     <comp lib="0" loc="(160,190)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="H_in"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(170,310)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="V_in"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(170,530)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -447,8 +447,10 @@ end type_architecture;
     <comp loc="(820,160)" name="Drapeau_VD"/>
     <comp loc="(820,280)" name="Drapeau_FR"/>
     <comp loc="(820,410)" name="Drapeau_CH"/>
-    <wire from="(1000,230)" to="(1000,410)"/>
+    <wire from="(1000,160)" to="(1000,230)"/>
+    <wire from="(1000,230)" to="(1000,280)"/>
     <wire from="(1000,230)" to="(1010,230)"/>
+    <wire from="(1000,280)" to="(1000,410)"/>
     <wire from="(160,190)" to="(220,190)"/>
     <wire from="(170,310)" to="(420,310)"/>
     <wire from="(170,530)" to="(540,530)"/>
@@ -471,6 +473,8 @@ end type_architecture;
     <wire from="(540,320)" to="(600,320)"/>
     <wire from="(540,450)" to="(540,530)"/>
     <wire from="(540,450)" to="(600,450)"/>
+    <wire from="(820,160)" to="(1000,160)"/>
+    <wire from="(820,280)" to="(1000,280)"/>
     <wire from="(820,410)" to="(1000,410)"/>
   </circuit>
   <circuit name="Image_Gen">
@@ -522,14 +526,14 @@ end type_architecture;
     <comp loc="(520,220)" name="VGA_ctrl">
       <a name="label" val="VGA"/>
     </comp>
-    <comp loc="(780,360)" name="Exercise">
+    <comp loc="(770,360)" name="Exercise">
       <a name="label" val="Drapeaux"/>
     </comp>
     <wire from="(200,340)" to="(310,340)"/>
     <wire from="(210,310)" to="(280,310)"/>
     <wire from="(280,240)" to="(280,310)"/>
     <wire from="(280,240)" to="(370,240)"/>
-    <wire from="(290,400)" to="(660,400)"/>
+    <wire from="(290,400)" to="(650,400)"/>
     <wire from="(310,260)" to="(310,340)"/>
     <wire from="(310,260)" to="(370,260)"/>
     <wire from="(360,170)" to="(360,220)"/>
@@ -541,9 +545,10 @@ end type_architecture;
     <wire from="(520,280)" to="(610,280)"/>
     <wire from="(520,300)" to="(590,300)"/>
     <wire from="(590,300)" to="(590,380)"/>
-    <wire from="(590,380)" to="(660,380)"/>
+    <wire from="(590,380)" to="(650,380)"/>
     <wire from="(610,280)" to="(610,360)"/>
-    <wire from="(610,360)" to="(660,360)"/>
+    <wire from="(610,360)" to="(650,360)"/>
+    <wire from="(770,360)" to="(780,360)"/>
     <wire from="(780,170)" to="(780,360)"/>
   </circuit>
   <circuit name="SIM_VGA_ctrl">
@@ -955,12 +960,12 @@ end type_architecture;
     <comp lib="0" loc="(170,200)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="H_in"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(180,320)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="V_in"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(180,540)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -969,11 +974,11 @@ end type_architecture;
     </comp>
     <comp lib="0" loc="(510,430)" name="Constant">
       <a name="value" val="0xd5"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(510,490)" name="Constant">
       <a name="value" val="0x1aa"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(640,220)" name="Constant">
       <a name="value" val="0xfff"/>
@@ -997,11 +1002,11 @@ end type_architecture;
     </comp>
     <comp lib="3" loc="(590,420)" name="Comparator">
       <a name="mode" val="unsigned"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="3" loc="(590,480)" name="Comparator">
       <a name="mode" val="unsigned"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="7" loc="(215,280)" name="Text">
       <a name="text" val="Coordonnée verticale, valeurs entre 0 et 479"/>
@@ -1010,7 +1015,7 @@ end type_architecture;
       <a name="text" val="Coordonnée horizontale, valeurs entre 0 et 639"/>
     </comp>
     <wire from="(170,200)" to="(440,200)"/>
-    <wire from="(180,540)" to="(200,540)"/>
+    <wire from="(180,540)" to="(350,540)"/>
     <wire from="(440,200)" to="(440,410)"/>
     <wire from="(440,410)" to="(440,470)"/>
     <wire from="(440,410)" to="(550,410)"/>
@@ -1041,12 +1046,12 @@ end type_architecture;
     <comp lib="0" loc="(170,200)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="H_in"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(180,320)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="V_in"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(180,540)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -1055,7 +1060,7 @@ end type_architecture;
     </comp>
     <comp lib="0" loc="(350,430)" name="Constant">
       <a name="value" val="0xef"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(640,230)" name="Constant">
       <a name="value" val="0xfff"/>
@@ -1070,7 +1075,7 @@ end type_architecture;
     </comp>
     <comp lib="3" loc="(500,420)" name="Comparator">
       <a name="mode" val="unsigned"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="7" loc="(215,280)" name="Text">
       <a name="text" val="Coordonnée verticale, valeurs entre 0 et 479"/>
@@ -1102,28 +1107,28 @@ end type_architecture;
       <a name="output" val="true"/>
       <a name="width" val="12"/>
     </comp>
-    <comp lib="0" loc="(170,200)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="H_in"/>
-      <a name="width" val="12"/>
-    </comp>
-    <comp lib="0" loc="(180,320)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="V_in"/>
-      <a name="width" val="12"/>
-    </comp>
-    <comp lib="0" loc="(180,540)" name="Pin">
+    <comp lib="0" loc="(160,540)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="SW"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(170,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="H_in"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="0" loc="(180,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="V_in"/>
+      <a name="width" val="10"/>
+    </comp>
     <comp lib="0" loc="(510,490)" name="Constant">
       <a name="value" val="0x13f"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(510,550)" name="Constant">
       <a name="value" val="0x13f"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="0" loc="(640,230)" name="Constant">
       <a name="value" val="0xfff"/>
@@ -1139,11 +1144,11 @@ end type_architecture;
     </comp>
     <comp lib="3" loc="(580,480)" name="Comparator">
       <a name="mode" val="unsigned"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="3" loc="(580,540)" name="Comparator">
       <a name="mode" val="unsigned"/>
-      <a name="width" val="12"/>
+      <a name="width" val="10"/>
     </comp>
     <comp lib="7" loc="(215,280)" name="Text">
       <a name="text" val="Coordonnée verticale, valeurs entre 0 et 479"/>
@@ -1151,9 +1156,9 @@ end type_architecture;
     <comp lib="7" loc="(225,160)" name="Text">
       <a name="text" val="Coordonnée horizontale, valeurs entre 0 et 639"/>
     </comp>
+    <wire from="(160,540)" to="(200,540)"/>
     <wire from="(170,200)" to="(490,200)"/>
     <wire from="(180,320)" to="(440,320)"/>
-    <wire from="(180,540)" to="(200,540)"/>
     <wire from="(440,320)" to="(440,530)"/>
     <wire from="(440,530)" to="(540,530)"/>
     <wire from="(490,200)" to="(490,470)"/>
