@@ -1,0 +1,30 @@
+name: Push to GitLab
+
+on:
+  push:
+    branches:
+      - main  # Change this to your preferred branch
+
+jobs:
+  push-to-gitlab:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Push to GitLab
+        run: |
+          git remote add gitlab https://gitedu.hesge.ch/arian.dervisha/hepia.git
+          git push gitlab HEAD:main
+
+      - name: Mirror commit message to GitLab
+        run: |
+          COMMIT_MESSAGE=$(git log --format=%B -n 1 ${{ github.sha }})
+          echo "$COMMIT_MESSAGE" > commit_message.txt
+          curl --request POST \
+            --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_TOKEN }}" \
+            --form "branch=main" \
+            --form "commit_message=$(cat commit_message.txt)" \
+            --form "actions[][action]=update" \
+            "https://gitlab.com/api/v4/projects/14113/mirror/pull"
