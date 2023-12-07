@@ -15,7 +15,7 @@ jobs:
 
       - name: Push to GitLab
         run: |
-          git remote add gitlab ssh://git@ssh.hesge.ch:10572/arian.dervisha/hepia.git
+          git remote add gitlab https://gitedu.hesge.ch/arian.dervisha/hepia.git
           git push gitlab HEAD:main
 
       - name: Mirror commit message to GitLab
