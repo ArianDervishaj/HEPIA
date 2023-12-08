@@ -334,8 +334,44 @@ TSWLatexianTemp*
 # Ignore all local history of files
 .history
 .ionide
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
 Histoire/notes_film.md
 Prog/**/*.out
 Prog/**/*.o
+Sys_Embarque/**/Debug
+Sys_Embarque/**/.settings
+Sys_Embarque/**/.*
+Sys_Embarque/**/**.launch
