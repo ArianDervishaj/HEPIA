@@ -375,3 +375,4 @@ Sys_Embarque/**/Debug
 Sys_Embarque/**/.settings
 Sys_Embarque/**/.*
 Sys_Embarque/**/**.launch
+*.sh
